@@ -3,4 +3,5 @@ WORKDIR /
 RUN apt update
 RUN apt install git -y
 RUN git clone https://github.com/httpcats/http.cat.git
-RUN cp -r /*/public/ /usr/local/apache2/htdocs/
+RUN cp  /http.cat/public/images/* /usr/local/apache2/htdocs/
+RUN rm -rf /http.cat/
